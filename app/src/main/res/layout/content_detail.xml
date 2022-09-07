@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:rotationX="1"
+    app:layoutDescription="@xml/motion_detail"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".DetailActivity"
+    tools:showIn="@layout/activity_detail">
+
+    <TextView
+        android:id="@+id/file_name"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:text="File Name: "
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_file"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:lineSpacingExtra="2dp"
+        android:lines="3"
+        android:text="1213213333133123213123312312332131312312312312321"
+        android:textColor="@color/design_default_color_primary"
+        app:layout_constraintBaseline_toBaselineOf="@+id/file_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/file_name" />
+
+    <TextView
+        android:id="@+id/download_status"
+
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="64dp"
+        android:text="Status:"
+        app:layout_constraintStart_toStartOf="@+id/file_name"
+        app:layout_constraintTop_toBottomOf="@+id/file_name" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="121321321"
+        app:layout_constraintBaseline_toBaselineOf="@+id/download_status"
+        app:layout_constraintStart_toStartOf="@+id/tv_file" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="OK"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
